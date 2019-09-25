@@ -1,30 +1,37 @@
-#String Operators
+## String Operators ##
 
+#Questions
+
+print("")
 print("Please enter the number of lives.")
-lives = input()
+lives = int(input())
 print("")
 
 print("Please enter the energy level.")
-energy = input()
+energy = int(input())
 print("")
 
 print("Please enter the shield level.")
-shield = input()
+shield = int(input())
 print("")
 
 #Symbols
-#l = a
-#e = b
-#s = c
+
+lives_symbol = "♥"
+energy_symbol = "☺"
+shield_symbol = "♦"
 
 #Calculations
-lives_level = print("a", * lives)
-#energy_level = energy*e
-#shield_level = shield*s
+
+lives_level = lives * lives_symbol
+energy_level = energy * energy_symbol
+shield_level = shield * shield_symbol
 
 #Results
-print("Lives: ", lives_level)
+
+print("Lives:  ", lives_level)
 print("")
-#print("Energy: ", energy_level)
-#print("")
-#print("Shield: ", shield_level)
+print("Energy: ", energy_level)
+print("")
+print("Shield: ", shield_level)
+print("")
