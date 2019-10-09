@@ -14,7 +14,8 @@ print("")
 #"for letter" reads the letters one at time starting from the first
 #it then stores it in the variable COUNT
 #then the loop goes over again
-#and it adds the second letter to the count (this is how it's done backwards)
+#and it adds the second letter to the variable COUNT
+#(this is how it's done backwards)
 #it ADDS the LETTER TO the COUNT and not the count to the letter.
 
 for letter in phrase:
