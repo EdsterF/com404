@@ -16,7 +16,7 @@ for count in range (cave_distance, 0, -1):
     #count explained
     #count is a variable inside the loop:
     #this contains the "total" for every time the loop goes around
-    #in this case it subtracts one from the total every time
+    #in this case 1 is subtracted from the total every time
 
 #Final message
 print("")
