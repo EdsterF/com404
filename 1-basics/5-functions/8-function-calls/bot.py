@@ -21,13 +21,13 @@ def display_mirrored(word):
 
 
 def repeat(word):
-    print("How many times should i print the word")
+    print("How many times should I print the word?")
     word_repeat = int(input())
     for number in range (0, word_repeat, 1):
         if (number % 2 == 0):
-            lower_case(word)
+            print (word.lower())
         else:
-            upper_case(word)
+            print (word.upper())
 
 
 def run():
@@ -59,3 +59,5 @@ def run():
     elif (user_choice == "5"):
         repeat(word)
 
+#Call to Function
+run()
