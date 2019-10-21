@@ -1,21 +1,33 @@
 #Functions
 def display_box(word):
-    print("@" * (len(word) + 10))
-    print("@ ", word, " @")
-    print("@" * (len(word) + 10))
+    print("@" * (len(word) + 4))
+    print("@", word, "@")
+    print("@" * (len(word) + 4))
     return word
 
 
-#def display_lower_case():
+def display_lower_case(word):
+    print (str.lower(word))
 
 
-#def display_upper_case():
+def display_upper_case(word):
+    print (str.upper(word))
 
 
-#def display_mirrored():
+def display_mirrored(word):
+    for position in range (len(word)-1, -1, -1):
+        print (word[position], end="")
+    print("")
 
 
-#def repeat():
+def repeat(word):
+    print("How many times should i print the word")
+    word_repeat = int(input())
+    for number in range (0, word_repeat, 1):
+        if (number % 2 == 0):
+            lower_case(word)
+        else:
+            upper_case(word)
 
 
 def run():
@@ -29,13 +41,21 @@ def run():
     print("4) Display Mirrored – display the word with its mirrored word e.g. Hello | olleH")
     print("5) Repeat – ask the user how many times to display the word and then display the word that many times alternating between upper-case and lower-case.")
     print("")
-    user_choice = (int(input())
+    user_choice = input()
     print("")
 
-    if (user_choice == 1):
+    if (user_choice == "1"):
         display_box(word)
 
+    elif (user_choice == "2"):
+        display_lower_case(word)
 
+    elif (user_choice == "3"):
+        display_upper_case(word)
 
-#Run Program
-run()
+    elif (user_choice == "4"):
+        display_mirrored(word)
+
+    elif (user_choice == "5"):
+        repeat(word)
+
