@@ -1,20 +1,27 @@
 #Variable
+
+
+#message
+print("your health is 100%. Escape is in progress...")
+  
+#loop
+
+MAX_LOOP=5
+MIN_LOOP=0
 health = 100
 
-
-#Function
-def question(answer):
-   
+while MAX_LOOP>MIN_LOOP:
+    
     print("...Oh dear, who is that?")
     answer = input()
+    MAX_LOOP=MAX_LOOP-1
 
-#loop
-    while (answer == "Smiler's Bot"):
+    if (answer == "Smiler's Bot"):
         health = health - 20
         print("Time to jam out of here!")
         print("")
 
-    if (answer == "Hacker"):
+    elif (answer == "Hacker"):
         health = health + 20
         print("Yay! Better follow this one!")
         print("")
@@ -23,13 +30,6 @@ def question(answer):
         print("Phew, just another emoji!")
         print("")
     
-
-#Call to function
-question(answer)
-question(answer)
-question(answer)
-question(answer)
-question(answer)
 
 #Final message
 print("Escaped! Health is", health, "%")
