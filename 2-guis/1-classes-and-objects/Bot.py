@@ -7,7 +7,23 @@ class Bot:
         self.energy = 100
         self.shield = 100
 
-    #methods
+    #methods #get
+    def get_age(self):
+        return self.age
+
+    def get_energy(self):
+        return self.energy
+
+    def get_name(self):
+        return self.name
+
+    def get_shield(self):
+        return self.shield
+
+    #methods #get
+    def decrement_energy(self, energy=-1):
+
+
     def display_name(self):
         name_lenght= len(self.name)
         print("#"+"#" * name_lenght +"###")
