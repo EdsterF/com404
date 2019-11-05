@@ -36,25 +36,10 @@ elif(option_choice == "4"):
     min_rows = 0
 
 
-    
+
     print((("*" * word_length)+"   ")*columns)
     #Nested decision
     while rows>min_rows:
         print((word+ "   ") *columns)
         print((("*" * word_length)+"   ")*columns)
         rows = rows-1
-    
-        
-
-
-
-
-
-
-
-        #word_length= int(len(word))
-        #if columns < 0:
-        #print((("*" * word_length)+"   ")*grid)
-        #print((word+ "   ") *grid)
-        #print((("*" * word_length)+"   ")*grid)
-
