@@ -1,11 +1,11 @@
 class Bot:
 
     #constructor (only add in brackets arguments that are going to be queried)
-    def __init__(self, name, age=0): #(so not included energy or shield)
+    def __init__(self, name, age=0, energy=100,shield=100):
         self.name = name
         self.age = age
-        self.energy = 100
-        self.shield = 100
+        self.energy = energy
+        self.shield = shield
 
     #methods #get
     def get_age(self):
@@ -21,7 +21,11 @@ class Bot:
         return self.shield
 
     #methods #get
-    def decrement_energy(self, energy=-1):
+    def decrement_energy(energy_decrease):
+        energy = (self.energy - energy_decrease)
+
+    def decrement_shield(shield_decrease):
+        shield = (self.shield - shield_decrease)
 
 
     def display_name(self):
@@ -57,13 +61,14 @@ class Bot:
     def __str__(self):
         return ("name="+self.name+","+"age="+self.age+","+self.energy+","+self.shield)
 
-#object of Bot
-beep = Bot("Beep")
-beep.display_name()
-beep.display_age()
-beep.display_energy()
-beep.display_shield()
+    def increment_age(self, age_increase):
+        age = (self.age + age_increase)
 
+    def increment_energy(self, energy_increase):
+        energy = (self.energy + energy_increase)
 
+    def incrememnt_shield(self, shield_increase):
+        shield = (self.shield + shield_increase)
 
-
+    def set_name(self, name):
+        self.name = (name)
