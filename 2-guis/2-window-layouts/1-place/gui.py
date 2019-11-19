@@ -1,29 +1,35 @@
 from tkinter import *
 
+#window backgroud color that can be referenced by all functions in the class
+background_color = "light grey"
+
 class Gui(Tk):
+    #constructor
     def __init__(self):
-        super().__init__()
+        super().__init__()#super is a call to the parent
 
         #set window attributes
 
-        self.geometry("350x190") #sets the window size of the gui
+        self.geometry("360x180") #sets the window size of the gui
         self.title("Newsletter") #sets window title name
         
         #add window components
+      
         self.__add_heading_label()
         self.__add_message_label()
         self.__add_email_label()
         self.__add_user_email()
         self.__add_user_button()
-        self.__add_frame()
+        
 
-    def __add_frame (self):
-        #create
-        self.add_frame = Frame ()
-        self.add_frame.place (x=10, y=10)
-
-        #style
-        self.add_frame.configure (background="blue")
+        # style
+        border_color = "grey"
+        self.configure(bg=background_color, 
+                       bd=0,) #window backgroud color
+        
+        #events
+        pass #pass allows for the code to be skipped when executed, it can
+        #useful when there is unfinished code
 
     def __add_heading_label(self):
         # CREATE
@@ -32,8 +38,10 @@ class Gui(Tk):
 
         # STYLE
         self.heading_label.configure (font="Arial 16", #configure allows to configure multiple attributes in one go
-                                      text= "RECEIVE OUR NEWSLETTER") 
+                                      text= "RECEIVE OUR NEWSLETTER",
+                                      bg= background_color) 
         # EVENTS
+        pass
 
     def __add_message_label(self):
         # create
@@ -42,35 +50,47 @@ class Gui(Tk):
         
         # style
         self.message_label.configure (font="Arial 10",
-                                      text="Please enter your email below to receive our newsletter.")
+                                      text="Please enter your email below to receive our newsletter.",
+                                      bg= background_color)
 
         # events
-    
+        pass
+
     def __add_email_label(self):
         #create
         self.email_label = Label ()
-        self.email_label.place ( x=80, y=100)
+        self.email_label.place ( x=30, y=100)
 
         #style
         self.email_label.configure (font="Arial 10",
-                                      text="Email")
+                                    text="Email:",
+                                    bg= background_color)
 
         #events
+        pass
 
     def __add_user_email(self):
         #crete
         self.user_email = Entry ()
-        self.user_email.place (x=140, y=100)
+        self.user_email.place (x=80, y=100)
         
         #style
-        #self.user_email.configure (geometry="10x50")
+        self.user_email.configure (font="Arial 10",
+                                   width= "28",
+                                   relief=SUNKEN)
+
+        #events
+        pass
     
     def __add_user_button(self):
         #create
         self.user_button = Button ()
-        self.user_button.place (x=140, y=140)
+        self.user_button.place (x=10, y=140)
 
         #style
         self.user_button.configure (font="Arial 12",
                                     text="Subscribe",
-                                    background="Pink")
+                                    background="antique white",
+                                    width= 37,
+                                    relief=RAISED)
+                                    
