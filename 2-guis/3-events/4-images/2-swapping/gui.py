@@ -41,7 +41,6 @@ class Gui(Tk):
         self.flip_button.bind("<ButtonRelease-3>", self.__right_flip_button_clicked)
  
     def __left_flip_button_clicked(self, event):
-        print("Hello")
         self.cactus_image_label.configure(image=self.cactus_with_name_image)
     
     def __right_flip_button_clicked(self, event):
